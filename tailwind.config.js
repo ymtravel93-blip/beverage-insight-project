@@ -7,30 +7,27 @@ export default {
   theme: {
     extend: {
       colors: {
+        // 'charcoal' is now Deep Forest Green
         charcoal: {
-          DEFAULT: '#1A1918',
-          light: '#282625',
-          muted: '#3D3A38',
+          DEFAULT: '#14251B', 
+          light: '#233B2C',
         },
-        ivory: {
-          DEFAULT: '#FBF9F5',
-          dark: '#F3EFEA',
-          border: '#E8E2D9',
-        },
+        // 'copper' is now Soft Premium Gold
         copper: {
-          DEFAULT: '#C88D66',
-          hover: '#B57A55',
-          light: '#F4ECE6',
+          DEFAULT: '#C5A880', 
+          hover: '#B0946D',
+          light: '#E6DCCF',
         },
-        forest: {
-          DEFAULT: '#22332B',
-          muted: '#34493E',
+        // 'ivory' is now Earthy Sand
+        ivory: {
+          DEFAULT: '#F7F6F2', 
+          border: '#E2DFD8',
         }
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['"Inter"', 'system-ui', 'sans-serif'],
-      },
+        serif: ['"Playfair Display"', 'serif'],
+        sans: ['"Inter"', 'sans-serif'],
+      }
     },
   },
   plugins: [],
