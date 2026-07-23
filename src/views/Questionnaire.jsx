@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { QUESTIONS } from '../data/questions';
-import QuestionCard from '../components/QuestionCard';
-import ProgressBar from '../components/ProgressBar';
+import { QUESTIONS } from '../data/questions.js';
+import QuestionCard from '../components/QuestionCard.jsx';
+import ProgressBar from '../components/ProgressBar.jsx';
 
 export default function Questionnaire({ onComplete }) {
   const [currentIndex, setCurrentIndex] = useState(0);
