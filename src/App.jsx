@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import LandingPage from './views/LandingPage';
-import Questionnaire from './views/Questionnaire';
-import ThankYouPage from './views/ThankYouPage';
+import Navbar from './components/Navbar.jsx';
+import LandingPage from './views/LandingPage.jsx';
+import Questionnaire from './views/Questionnaire.jsx';
+import ThankYouPage from './views/ThankYouPage.jsx';
 
 const GOOGLE_SCRIPT_URL = "https://docs.google.com/spreadsheets/d/1tkSVWhAWIRViPVGxVv3g3ueEwX-au7Cm_tU4aKDjk58/edit?usp=sharing";
 
