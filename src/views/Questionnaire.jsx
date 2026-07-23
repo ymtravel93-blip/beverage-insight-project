@@ -54,8 +54,9 @@ export default function Questionnaire({ onComplete }) {
     setIsSubmitting(false);
   };
 
-  // Check if current step has a valid input
-  const isValid = Array.isArray(currentAnswers) ? currentAnswers.length > 0 : Boolean(currentAnswers && currentAnswers.trim());
+  const isValid = Array.isArray(currentAnswers) 
+    ? currentAnswers.length > 0 
+    : Boolean(currentAnswers && currentAnswers.trim());
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-6 flex flex-col min-h-[calc(100vh-120px)] justify-between">
@@ -71,12 +72,10 @@ export default function Questionnaire({ onComplete }) {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="mt-2"
           >
-            {/* Section Badge */}
             <span className="text-[10px] uppercase tracking-[0.25em] text-copper font-medium block mb-2">
               {currentQ.section}
             </span>
 
-            {/* Question Title & Subtitle */}
             <h2 className="font-serif text-2xl sm:text-3xl text-charcoal font-normal leading-snug mb-2">
               {currentQ.title}
             </h2>
@@ -84,7 +83,6 @@ export default function Questionnaire({ onComplete }) {
               {currentQ.subtitle}
             </p>
 
-            {/* 1. DROPDOWN TYPE (Question 1) */}
             {currentQ.type === 'dropdown' && (
               <div className="mb-6">
                 <select
@@ -100,7 +98,6 @@ export default function Questionnaire({ onComplete }) {
               </div>
             )}
 
-            {/* 2. SCALE TYPE 1-5 (Question 11) */}
             {currentQ.type === 'scale' && (
               <div className="py-6">
                 <div className="flex justify-between max-w-md mx-auto mb-4">
@@ -125,7 +122,6 @@ export default function Questionnaire({ onComplete }) {
               </div>
             )}
 
-            {/* 3. SHORT & LONG TEXT INPUTS (Questions 13 & 20) */}
             {(currentQ.type === 'text_short' || currentQ.type === 'text_long') && (
               <div className="mb-6">
                 <textarea
@@ -138,7 +134,6 @@ export default function Questionnaire({ onComplete }) {
               </div>
             )}
 
-            {/* 4. IMAGE CARDS GRID (Questions 15, 16, 17) */}
             {currentQ.type === 'image_select' && (
               <div className="grid grid-cols-2 gap-4">
                 {currentQ.options.map(option => (
@@ -153,7 +148,6 @@ export default function Questionnaire({ onComplete }) {
               </div>
             )}
 
-            {/* 5. STANDARD MULTIPLE / SINGLE CHOICE CARDS */}
             {(currentQ.type === 'single' || currentQ.type === 'multiple') && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {currentQ.options.map(option => (
@@ -171,7 +165,6 @@ export default function Questionnaire({ onComplete }) {
         </AnimatePresence>
       </div>
 
-      {/* Navigation Footer */}
       <div className="pt-6 pb-4 flex justify-between items-center border-t border-ivory-border/60 mt-6">
         <button
           onClick={handleBack}
