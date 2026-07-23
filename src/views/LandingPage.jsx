@@ -6,14 +6,14 @@ export default function LandingPage({ onStart }) {
     <div className="w-full text-charcoal">
       {/* SECTION 1: HERO */}
       <section className="relative min-h-[85vh] bg-charcoal text-ivory flex items-center justify-center px-6 py-20 overflow-hidden">
-        {/* Background Image with Dark Mood Overlay */}
+        {/* New Green/Botanical Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1600" 
-            alt="Craft Beverage" 
-            className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity scale-105"
+            src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=1600" 
+            alt="Botanical Craft Beverage" 
+            className="w-full h-full object-cover object-center opacity-40 mix-blend-luminosity scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/40" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
@@ -41,7 +41,7 @@ export default function LandingPage({ onStart }) {
             transition={{ delay: 0.2 }}
             className="max-w-2xl text-sm sm:text-base text-ivory/70 font-light leading-relaxed mb-10"
           >
-            An independent research initiative exploring the evolving beverage landscape in India. Your insights help shape the future of craft spirits and beverages.
+            An independent research initiative exploring the evolving beverage landscape in India. Your insights help shape the future of craft spirits and botanicals.
           </motion.p>
 
           <motion.button
@@ -59,7 +59,7 @@ export default function LandingPage({ onStart }) {
 
       {/* SECTION 2: WHY YOUR INSIGHTS MATTER & HOW IT WORKS */}
       <section className="grid grid-cols-1 md:grid-cols-2">
-        {/* Left: Light Editorial Block */}
+        {/* Left: Earthy Editorial Block */}
         <div className="bg-ivory p-10 sm:p-16 border-b md:border-b-0 md:border-r border-ivory-border flex flex-col justify-center">
           <span className="text-[10px] uppercase tracking-[0.25em] text-copper font-medium mb-3">About The Study</span>
           <h2 className="font-serif text-3xl sm:text-4xl text-charcoal mb-4">Why Your Insights Matter</h2>
@@ -83,12 +83,13 @@ export default function LandingPage({ onStart }) {
           </div>
         </div>
 
-        {/* Right: Dark Moody Block */}
+        {/* Right: Deep Forest Moody Block */}
         <div className="bg-charcoal text-ivory p-10 sm:p-16 relative flex flex-col justify-center overflow-hidden">
+          {/* Earthy/Agave Side Image */}
           <img 
-            src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&q=80&w=1000" 
-            alt="Craft Ice & Barware" 
-            className="absolute right-0 top-0 w-1/2 h-full object-cover opacity-10 pointer-events-none"
+            src="https://images.unsplash.com/photo-1595932598380-459f0322c2bb?auto=format&fit=crop&q=80&w=1000" 
+            alt="Botanical Ingredients" 
+            className="absolute right-0 top-0 w-1/2 h-full object-cover opacity-20 pointer-events-none mix-blend-overlay"
           />
           <div className="relative z-10">
             <span className="text-[10px] uppercase tracking-[0.25em] text-copper font-medium mb-3 block">How It Works</span>
