@@ -1,34 +1,57 @@
 import React from 'react';
 
-export default function QuestionCard({ option, isSelected, onSelect }) {
+export default function QuestionCard({ option, isSelected, onSelect, hasImage }) {
+  if (hasImage) {
+    return (
+      <div
+        onClick={onSelect}
+        className={`
+          group cursor-pointer rounded-sm border overflow-hidden transition-all duration-300 relative text-left bg-charcoal-light
+          ${isSelected ? 'border-copper ring-1 ring-copper' : 'border-ivory-border/20 hover:border-copper/50'}
+        `}
+      >
+        <div className="h-28 w-full overflow-hidden relative">
+          <img 
+            src={option.image} 
+            alt={option.label}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent" />
+        </div>
+        <div className="p-3 flex items-center justify-between bg-charcoal">
+          <span className="text-xs font-medium text-ivory group-hover:text-copper transition-colors">
+            {option.label}
+          </span>
+          <div className={`
+            w-4 h-4 rounded-full border flex items-center justify-center shrink-0
+            ${isSelected ? 'border-copper bg-copper' : 'border-ivory-border/40'}
+          `}>
+            {isSelected && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       onClick={onSelect}
       className={`
-        smooth-bg group cursor-pointer p-6 rounded-sm border text-left transition-all duration-300 relative overflow-hidden
+        cursor-pointer p-5 rounded-sm border text-left transition-all duration-300 relative
         ${isSelected 
-          ? 'border-copper bg-copper-light/30 shadow-sm' 
-          : 'border-ivory-border bg-white hover:border-copper/40 hover:bg-ivory/50'}
+          ? 'border-copper bg-copper-light/10 text-charcoal' 
+          : 'border-ivory-border bg-white/80 hover:border-copper/40 hover:bg-white'}
       `}
     >
-      <div className="flex items-start justify-between">
-        <div className="pr-6">
-          <h4 className="text-base font-medium text-charcoal group-hover:text-copper transition-colors leading-snug">
-            {option.label}
-          </h4>
-          {option.detail && (
-            <p className="mt-1.5 text-xs text-charcoal/60 leading-relaxed font-light">
-              {option.detail}
-            </p>
-          )}
-        </div>
+      <div className="flex items-center justify-between">
+        <span className="text-sm font-medium text-charcoal leading-snug">
+          {option.label}
+        </span>
         <div className={`
-          w-5 h-5 rounded-full border flex items-center justify-center shrink-0 mt-0.5 transition-all duration-300
-          ${isSelected ? 'border-copper bg-copper' : 'border-ivory-border group-hover:border-copper/50'}
+          w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ml-4
+          ${isSelected ? 'border-copper bg-copper' : 'border-ivory-border'}
         `}>
-          {isSelected && (
-            <div className="w-2 h-2 rounded-full bg-white" />
-          )}
+          {isSelected && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
         </div>
       </div>
     </div>
