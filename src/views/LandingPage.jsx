@@ -6,17 +6,15 @@ export default function LandingPage({ onStart }) {
     <div className="w-full bg-[#121212] text-[#EFECE6] font-sans min-h-screen flex flex-col justify-between">
       {/* --- NAVIGATION BAR --- */}
       <header className="w-full border-b border-[#2A2825] px-6 md:px-12 py-5 flex items-center justify-between bg-[#121212]/90 backdrop-blur-md sticky top-0 z-50">
-        {/* Brand Logo & Name */}
-        <div className="flex items-center space-x-3">
-          <div className="w-9 h-9 rounded-full border border-[#B38B59]/40 flex items-center justify-center">
-            <svg className="w-5 h-5 text-[#B38B59]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-            </svg>
-          </div>
-          <div className="flex flex-col text-left">
-            <span className="text-[11px] uppercase tracking-[0.25em] font-medium text-[#EFECE6]">THE BEVERAGE</span>
-            <span className="text-[9px] uppercase tracking-[0.2em] text-[#B38B59]">INSIGHT PROJECT</span>
-          </div>
+        
+        {/* Brand Text Only (No Icon) */}
+        <div className="flex flex-col text-left">
+          <span className="text-[12px] uppercase tracking-[0.28em] font-medium text-[#EFECE6] leading-none mb-1">
+            THE BEVERAGE
+          </span>
+          <span className="text-[9px] uppercase tracking-[0.22em] text-[#B38B59] leading-none">
+            INSIGHT PROJECT
+          </span>
         </div>
 
         {/* Center Nav Links */}
@@ -114,7 +112,7 @@ export default function LandingPage({ onStart }) {
             <div className="flex items-center space-x-2 text-[#A09D98]">
               <svg className="w-4 h-4 text-[#B38B59]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
+                <polyline points="12 6 12 16 14" />
               </svg>
               <div className="text-[10px] uppercase tracking-[0.15em] font-medium leading-tight">
                 <span>4-5 MINUTES</span> <br />
