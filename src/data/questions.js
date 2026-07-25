@@ -32,22 +32,48 @@ export const QUESTIONS = [
       { id: "rtd_cocktails", label: "Ready-to-Drink Cocktails", image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=500" }
     ]
   },
-  {
+{
     id: "q3_flavour_notes",
     section: "SECTION 1 | PROFILE & PALATE",
     category: "PALATE",
     title: "When choosing a premium drink, which flavour profiles appeal to you?",
-    subtitle: "Select up to 2 options.",
+    subtitle: "Select up to 3 options.",
     type: "image_grid",
-    maxSelect: 2,
+    maxSelect: 3,
     options: [
-      { id: "tropical_fresh", label: "Tropical & Fresh (Coconut, Citrus)", image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=500" },
-      { id: "warm_spiced", label: "Warm & Spiced (Cinnamon, Oak)", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=500" },
-      { id: "rich_indulgent", label: "Rich & Indulgent (Coffee, Honey)", image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=500" },
-      { id: "earthy_botanical", label: "Earthy & Botanical (Herbal, Flora)", image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=500" }
+      { 
+        id: "tropical_fresh", 
+        label: "Tropical & Citrus (Coconut Sap, Passionfruit, Lime)", 
+        image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=500" 
+      },
+      { 
+        id: "warm_spiced", 
+        label: "Warm & Spiced (Ceylon Cinnamon, Nutmeg, Clove)", 
+        image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=500" 
+      },
+      { 
+        id: "earthy_botanical", 
+        label: "Earthy Botanicals (Juniper, Wild Herbs, Floral Notes)", 
+        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=500" 
+      },
+      { 
+        id: "rich_honey_vanilla", 
+        label: "Honeyed & Toasted (Natural Honey, Bourbon Vanilla)", 
+        image: "https://images.unsplash.com/photo-1587049352847-4a222e784d38?auto=format&fit=crop&q=80&w=500" 
+      },
+      { 
+        id: "smoky_oak", 
+        label: "Smoky & Woody (Toasted Oak, Subtle Char, Woodsmoke)", 
+        image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=500" 
+      },
+      { 
+        id: "rich_espresso_cocoa", 
+        label: "Indulgent Dark (Dark Roasted Coffee, Roasted Cocoa)", 
+        image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=500" 
+      }
     ]
   },
-
+  
   // SECTION 2 | PACKAGING & AESTHETICS
   {
     id: "q4_bottle_silhouette",
