@@ -5,14 +5,14 @@ export const QUESTIONS = [
     section: "SECTION 1 | PROFILE & PALATE",
     category: "DEMOGRAPHICS",
     title: "Which age group best describes your stage of life?",
-    subtitle: "Select the group that applies to you.",
+    subtitle: "Select the stage that applies to you.",
     type: "image_grid",
     maxSelect: 1,
     options: [
-      { id: "21_25", label: "21–25 (Emerging Connoisseur)", image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=500" },
-      { id: "26_35", label: "26–35 (Modern Enthusiast)", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=500" },
-      { id: "36_45", label: "36–45 (Refined Palate)", image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=500" },
-      { id: "46_plus", label: "46+ (Classic Collector)", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=500" }
+      { id: "21_25", label: "21–25 (Emerging Connoisseur)", image: "https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "26_35", label: "26–35 (Modern Enthusiast)", image: "https://images.pexels.com/photos/616836/pexels-photo-616836.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "36_45", label: "36–45 (Refined Palate)", image: "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "46_plus", label: "46+ (Classic Collector)", image: "https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=600" }
     ]
   },
   {
@@ -20,19 +20,19 @@ export const QUESTIONS = [
     section: "SECTION 1 | PROFILE & PALATE",
     category: "PREFERENCES",
     title: "Which beverage categories do you gravitate toward most?",
-    subtitle: "Choose up to 3 options.",
+    subtitle: "Select up to 3 options.",
     type: "image_grid",
     maxSelect: 3,
     options: [
-      { id: "aged_spirits", label: "Aged Spirits (Whisky & Bourbon)", image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=500" },
-      { id: "craft_botanicals", label: "Craft Botanicals & Gin", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=500" },
-      { id: "spiced_rums", label: "Island & Spiced Rums", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=500" },
-      { id: "wines_sparkling", label: "Fine Wines & Champagne", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=500" },
-      { id: "craft_beer", label: "Craft Beer & Ales", image: "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&q=80&w=500" },
-      { id: "rtd_cocktails", label: "Ready-to-Drink Cocktails", image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=500" }
+      { id: "aged_spirits", label: "Aged Spirits (Whisky & Bourbon)", image: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "craft_botanicals", label: "Craft Botanicals & Gin", image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "spiced_rums", label: "Island & Spiced Rums", image: "https://images.pexels.com/photos/2403391/pexels-photo-2403391.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "wines_sparkling", label: "Fine Wines & Champagne", image: "https://images.pexels.com/photos/290316/pexels-photo-290316.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "craft_beer", label: "Craft Beer & Ales", image: "https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "rtd_cocktails", label: "Ready-to-Drink Cocktails", image: "https://images.pexels.com/photos/1304540/pexels-photo-1304540.jpeg?auto=compress&cs=tinysrgb&w=600" }
     ]
   },
-{
+  {
     id: "q3_flavour_notes",
     section: "SECTION 1 | PROFILE & PALATE",
     category: "PALATE",
@@ -41,39 +41,15 @@ export const QUESTIONS = [
     type: "image_grid",
     maxSelect: 3,
     options: [
-      { 
-        id: "tropical_fresh", 
-        label: "Tropical & Citrus (Coconut Sap, Passionfruit, Lime)", 
-        image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=500" 
-      },
-      { 
-        id: "warm_spiced", 
-        label: "Warm & Spiced (Ceylon Cinnamon, Nutmeg, Clove)", 
-        image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=500" 
-      },
-      { 
-        id: "earthy_botanical", 
-        label: "Earthy Botanicals (Juniper, Wild Herbs, Floral Notes)", 
-        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=500" 
-      },
-      { 
-        id: "rich_honey_vanilla", 
-        label: "Honeyed & Toasted (Natural Honey, Bourbon Vanilla)", 
-        image: "https://images.unsplash.com/photo-1587049352847-4a222e784d38?auto=format&fit=crop&q=80&w=500" 
-      },
-      { 
-        id: "smoky_oak", 
-        label: "Smoky & Woody (Toasted Oak, Subtle Char, Woodsmoke)", 
-        image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=500" 
-      },
-      { 
-        id: "rich_espresso_cocoa", 
-        label: "Indulgent Dark (Dark Roasted Coffee, Roasted Cocoa)", 
-        image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=500" 
-      }
+      { id: "tropical_citrus", label: "Tropical & Citrus (Coconut Sap, Lime)", image: "https://images.pexels.com/photos/1028637/pexels-photo-1028637.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "warm_spiced", label: "Warm & Spiced (Ceylon Cinnamon, Clove)", image: "https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "earthy_botanical", label: "Earthy Botanicals (Juniper, Wild Herbs)", image: "https://images.pexels.com/photos/1304542/pexels-photo-1304542.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "honey_vanilla", label: "Honeyed & Toasted (Natural Honey, Vanilla)", image: "https://images.pexels.com/photos/33260/honey-sweet-syrup-organic.jpg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "smoky_wood", label: "Smoky & Woody (Toasted Oak, Charred Wood)", image: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "espresso_cocoa", label: "Indulgent Dark (Espresso, Dark Cocoa)", image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=600" }
     ]
   },
-  
+
   // SECTION 2 | PACKAGING & AESTHETICS
   {
     id: "q4_bottle_silhouette",
@@ -84,78 +60,123 @@ export const QUESTIONS = [
     type: "image_grid",
     maxSelect: 1,
     options: [
-      { id: "apothecary", label: "Apothecary & Heritage", image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=500" },
-      { id: "sleek_geometry", label: "Sleek & Minimalist", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=500" },
-      { id: "textured_craft", label: "Textured & Embossed Craft", image: "https://images.unsplash.com/photo-1616768393663-e380e22ecbfa?auto=format&fit=crop&q=80&w=500" },
-      { id: "modern_matte", label: "Modern Opaque / Matte", image: "https://images.unsplash.com/photo-1595932598380-459f0322c2bb?auto=format&fit=crop&q=80&w=500" }
+      { id: "apothecary", label: "Apothecary & Heritage Heavy Glass", image: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "sleek_geometry", label: "Sleek, Tall & Minimalist", image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "textured_craft", label: "Textured & Embossed Craft Glass", image: "https://images.pexels.com/photos/2403391/pexels-photo-2403391.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "modern_matte", label: "Modern Opaque / Frosted Finish", image: "https://images.pexels.com/photos/1304540/pexels-photo-1304540.jpeg?auto=compress&cs=tinysrgb&w=600" }
     ]
   },
   {
-    id: "q5_glass_colour",
+    id: "q5_glass_finish",
     section: "SECTION 2 | PACKAGING & AESTHETICS",
     category: "BOTTLE STUDY",
-    title: "Which glass finish feels most premium for a high-end spirit?",
-    subtitle: "Select your preferred aesthetic finish.",
+    title: "Which glass tone feels most premium for a craft spirit?",
+    subtitle: "Select your preferred visual aesthetic.",
     type: "image_grid",
     maxSelect: 1,
     options: [
-      { id: "forest_green", label: "Deep Forest Green Glass", image: "https://images.unsplash.com/photo-1614316710469-6d8011c342cb?auto=format&fit=crop&q=80&w=500" },
-      { id: "warm_amber", label: "Warm Amber Glass", image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=500" },
-      { id: "crystal_clear", label: "Ultra-Clear Crystal Glass", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=500" },
-      { id: "frosted_dark", label: "Frosted / Opaque Dark Glass", image: "https://images.unsplash.com/photo-1595932598380-459f0322c2bb?auto=format&fit=crop&q=80&w=500" }
+      { id: "forest_green", label: "Deep Forest Green Glass", image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "warm_amber", label: "Warm Barrel Amber Glass", image: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "crystal_clear", label: "Ultra-Clear Heavy Crystal", image: "https://images.pexels.com/photos/1304540/pexels-photo-1304540.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "opaque_black", label: "Opaque Dark / Velvet Finish", image: "https://images.pexels.com/photos/2403391/pexels-photo-2403391.jpeg?auto=compress&cs=tinysrgb&w=600" }
+    ]
+  },
+  {
+    id: "q6_label_style",
+    section: "SECTION 2 | PACKAGING & AESTHETICS",
+    category: "BRAND AESTHETICS",
+    title: "Which label typography & branding style resonates with you?",
+    subtitle: "Select the style you prefer.",
+    type: "image_grid",
+    maxSelect: 1,
+    options: [
+      { id: "classic_editorial", label: "Classic Editorial & Serif Typography", image: "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "bold_minimal", label: "Bold Sans-Serif Minimalist", image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "handcrafted_illustration", label: "Botanical & Hand-Drawn Illustration", image: "https://images.pexels.com/photos/1304542/pexels-photo-1304542.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "vintage_stamped", label: "Vintage Foil-Stamped Heritage Label", image: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=600" }
     ]
   },
 
   // SECTION 3 | EXPLORATION & VALUE
   {
-    id: "q6_innovation_reaction",
+    id: "q7_innovation_mindset",
     section: "SECTION 3 | EXPLORATION & VALUE",
     category: "CATEGORY PERCEPTION",
     title: "If you saw a new premium Coconut Spirit or Botanical Rum, how would you react?",
-    subtitle: "Select the option that matches your mindset.",
+    subtitle: "Select the reaction that matches your mindset.",
     type: "image_grid",
     maxSelect: 1,
     options: [
-      { id: "instant_buy", label: "Instant buy — I love unique regional spirits.", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=500" },
-      { id: "curious_bar", label: "Curious — I would try it at a bar first.", image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=500" },
-      { id: "skeptical_reviews", label: "Skeptical — I need reviews first.", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=500" }
+      { id: "instant_buy", label: "Instant Buy — I love trying unique regional spirits.", image: "https://images.pexels.com/photos/1028637/pexels-photo-1028637.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "curious_bar", label: "Curious — I would try it at a bar first.", image: "https://images.pexels.com/photos/616836/pexels-photo-616836.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "skeptical_reviews", label: "Skeptical — I need to read reviews first.", image: "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=600" }
     ]
   },
   {
-    id: "q7_price_threshold",
+    id: "q8_price_threshold",
     section: "SECTION 3 | EXPLORATION & VALUE",
     category: "PRICE SENSITIVITY",
-    title: "What price threshold do you consider standard for a 750ml craft bottle?",
-    subtitle: "Select your usual willingness-to-pay range.",
+    title: "What price range do you consider standard for a premium 750ml craft bottle?",
+    subtitle: "Select your usual willingness-to-pay tier.",
     type: "image_grid",
     maxSelect: 1,
     options: [
-      { id: "p_1500_2500", label: "₹1,500 – ₹2,500 (Casual Premium)", image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=500" },
-      { id: "p_2500_3800", label: "₹2,500 – ₹3,800 (Boutique Craft)", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=500" },
-      { id: "p_3800_5500", label: "₹3,800 – ₹5,500 (Luxury Gifting)", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=500" }
+      { id: "p_1500_2500", label: "₹1,500 – ₹2,500 (Casual Premium)", image: "https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "p_2500_3800", label: "₹2,500 – ₹3,800 (Boutique Craft)", image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "p_3800_5500", label: "₹3,800 – ₹5,500 (Luxury Release / Gifting)", image: "https://images.pexels.com/photos/290316/pexels-photo-290316.jpeg?auto=compress&cs=tinysrgb&w=600" }
+    ]
+  },
+  {
+    id: "q9_drinking_occasion",
+    section: "SECTION 3 | EXPLORATION & VALUE",
+    category: "OCCASION",
+    title: "When are you most likely to enjoy a high-end craft spirit?",
+    subtitle: "Select your primary setting.",
+    type: "image_grid",
+    maxSelect: 2,
+    options: [
+      { id: "speakeasy_bar", label: "Chic Cocktail Lounges & Speakeasies", image: "https://images.pexels.com/photos/616836/pexels-photo-616836.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "home_entertaining", label: "Hosting Friends & Dinner Parties at Home", image: "https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "vacation_resort", label: "Beachfront Resorts & Island Getaways", image: "https://images.pexels.com/photos/1028637/pexels-photo-1028637.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "luxury_gifting", label: "Special Celebrations & Gifting", image: "https://images.pexels.com/photos/290316/pexels-photo-290316.jpeg?auto=compress&cs=tinysrgb&w=600" }
     ]
   },
 
   // SECTION 4 | LAUNCH STRATEGY
   {
-    id: "q8_launch_channel",
+    id: "q10_launch_channel",
     section: "SECTION 4 | BRAND LAUNCH STRATEGY",
     category: "DISCOVERY CHANNELS",
     title: "What is the best way for a new premium brand to introduce itself to you?",
-    subtitle: "Select up to 2 channels.",
+    subtitle: "Select up to 2 preferred channels.",
     type: "image_grid",
     maxSelect: 2,
     options: [
-      { id: "tasting_popups", label: "Tasting Pop-ups at High-End Bars", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=500" },
-      { id: "craft_festivals", label: "Exclusive Launch at Craft Festivals", image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=500" },
-      { id: "mixologist_word", label: "Mixologist & Bartender Endorsement", image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=500" },
-      { id: "editorial_social", label: "Curated Editorial Features", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=500" }
+      { id: "tasting_popups", label: "Exclusive Tasting Pop-ups at High-End Bars", image: "https://images.pexels.com/photos/616836/pexels-photo-616836.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "craft_festivals", label: "Boutique Craft Spirits Festivals", image: "https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "mixologist_recommend", label: "Mixologist & Bartender Endorsements", image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "editorial_media", label: "Curated Lifestyle & Editorial Features", image: "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=600" }
+    ]
+  },
+  {
+    id: "q11_purchase_trigger",
+    section: "SECTION 4 | BRAND LAUNCH STRATEGY",
+    category: "CONVERSION DRIVERS",
+    title: "What factor would most strongly influence you to try a new brand?",
+    subtitle: "Select your primary decision factor.",
+    type: "image_grid",
+    maxSelect: 1,
+    options: [
+      { id: "authentic_heritage", label: "Authentic Heritage & Natural Ingredients", image: "https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "taste_awards", label: "Unique Tasting Notes & Mixologist Reviews", image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "stunning_packaging", label: "Stunning Bottle Packaging & Table Aesthetics", image: "https://images.pexels.com/photos/2403391/pexels-photo-2403391.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "friend_recommendation", label: "Direct Word-of-Mouth Recommendation", image: "https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=600" }
     ]
   },
 
-  // FINAL QUESTION
+  // FINAL OPEN QUESTION
   {
-    id: "q9_ultimate_standard",
+    id: "q12_ultimate_standard",
     section: "FINAL INSIGHT",
     category: "OPEN OPINION",
     title: "Complete this sentence:",
