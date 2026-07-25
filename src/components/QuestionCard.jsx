@@ -1,12 +1,13 @@
 import React from 'react';
 
 export default function QuestionCard({ option, isSelected, onSelect, type }) {
+  // 1. IMAGE CARDS (Questions 15, 16, 17)
   if (type === 'image_select') {
     return (
       <div
         onClick={onSelect}
         className={`
-          group cursor-pointer rounded-sm border overflow-hidden transition-all duration-300 relative text-left bg-charcoal
+          group cursor-pointer rounded-sm border overflow-hidden transition-all duration-300 relative text-left bg-charcoal-light
           ${isSelected ? 'border-copper ring-2 ring-copper' : 'border-ivory-border/20 hover:border-copper/50'}
         `}
       >
@@ -33,6 +34,7 @@ export default function QuestionCard({ option, isSelected, onSelect, type }) {
     );
   }
 
+  // 2. STANDARD TEXT CARDS
   return (
     <div
       onClick={onSelect}
