@@ -1,328 +1,160 @@
 export const QUESTIONS = [
-  // SECTION 1 | ABOUT YOU
+  // SECTION 1 | PROFILE & PALATE
   {
-    id: "q1_city",
-    section: "SECTION 1 | ABOUT YOU",
+    id: "q1_demographics",
+    section: "SECTION 1 | PROFILE & PALATE",
     category: "DEMOGRAPHICS",
-    title: "Which city do you currently live in?",
-    subtitle: "Select your primary location.",
-    type: "dropdown",
+    title: "Where are you based and what age group do you belong to?",
+    subtitle: "Select your primary location and age group.",
+    type: "dual_select",
+    options: {
+      cities: ["Mumbai", "Bengaluru", "Delhi NCR", "Goa", "Pune", "Hyderabad", "Chennai", "Kolkata", "Other Tier 1/2 City", "International"],
+      ages: ["21–25", "26–35", "36–45", "46–55", "55+"]
+    }
+  },
+  {
+    id: "q2_beverage_categories",
+    section: "SECTION 1 | PROFILE & PALATE",
+    category: "PREFERENCES",
+    title: "Which beverage categories do you gravitate toward most?",
+    subtitle: "Choose up to 3 options.",
+    type: "image_grid",
+    maxSelect: 3,
     options: [
-      { id: "mumbai", label: "Mumbai" },
-      { id: "bengaluru", label: "Bengaluru" },
-      { id: "delhi_ncr", label: "Delhi NCR" },
-      { id: "goa", label: "Goa" },
-      { id: "pune", label: "Pune" },
-      { id: "hyderabad", label: "Hyderabad" },
-      { id: "chennai", label: "Chennai" },
-      { id: "kolkata", label: "Kolkata" },
-      { id: "other_tier1", label: "Other City in India" },
-      { id: "international", label: "International / Outside India" }
+      { id: "aged_spirits", label: "Aged Spirits (Whisky & Bourbon)", image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=500" },
+      { id: "craft_botanicals", label: "Craft Botanicals & Gin", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=500" },
+      { id: "spiced_rums", label: "Island & Spiced Rums", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=500" },
+      { id: "wines_sparkling", label: "Fine Wines & Champagne", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=500" },
+      { id: "craft_beer", label: "Craft Beer & Ales", image: "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&q=80&w=500" },
+      { id: "rtd_cocktails", label: "Ready-to-Drink Cocktails", image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=500" }
     ]
   },
   {
-    id: "q2_age",
-    section: "SECTION 1 | ABOUT YOU",
-    category: "DEMOGRAPHICS",
-    title: "Which age group do you belong to?",
-    subtitle: "Used strictly for demographic mapping.",
-    type: "single",
+    id: "q3_flavour_notes",
+    section: "SECTION 1 | PROFILE & PALATE",
+    category: "PALATE",
+    title: "When choosing a premium drink, which flavour notes appeal to you?",
+    subtitle: "Select up to 2 options.",
+    type: "image_grid",
+    maxSelect: 2,
     options: [
-      { id: "21_25", label: "21–25" },
-      { id: "26_35", label: "26–35" },
-      { id: "36_45", label: "36–45" },
-      { id: "46_55", label: "46–55" },
-      { id: "55_plus", label: "55+" }
-    ]
-  },
-  {
-    id: "q3_occupation",
-    section: "SECTION 1 | ABOUT YOU",
-    category: "DEMOGRAPHICS",
-    title: "Which best describes you?",
-    subtitle: "Select your primary current status.",
-    type: "single",
-    options: [
-      { id: "student", label: "Student" },
-      { id: "working_prof", label: "Working Professional" },
-      { id: "business_owner", label: "Business Owner" },
-      { id: "self_employed", label: "Self-employed" },
-      { id: "homemaker", label: "Homemaker" },
-      { id: "retired", label: "Retired" }
-    ]
-  },
-  {
-    id: "q4_lifestyle_statement",
-    section: "SECTION 1 | ABOUT YOU",
-    category: "LIFESTYLE",
-    title: "Which statement sounds most like you?",
-    subtitle: "Choose the statement that best fits your mindset.",
-    type: "single",
-    options: [
-      { id: "discovering", label: "I enjoy discovering new experiences." },
-      { id: "stick_known", label: "I usually stick to what I know." },
-      { id: "entertain_home", label: "I enjoy entertaining at home." },
-      { id: "restaurants_bars", label: "I love trying new restaurants and bars." }
+      { id: "tropical_fresh", label: "Tropical & Fresh (Coconut, Citrus)", image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=500" },
+      { id: "warm_spiced", label: "Warm & Spiced (Cinnamon, Oak)", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=500" },
+      { id: "rich_indulgent", label: "Rich & Indulgent (Coffee, Honey)", image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=500" },
+      { id: "earthy_botanical", label: "Earthy & Botanical (Herbal, Flora)", image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=500" }
     ]
   },
 
-  // SECTION 2 | YOUR BEVERAGE PREFERENCES
+  // SECTION 2 | PACKAGING & AESTHETICS
   {
-    id: "q5_enjoyed_beverages",
-    section: "SECTION 2 | YOUR BEVERAGE PREFERENCES",
-    category: "BEVERAGE PREFERENCES",
-    title: "Which beverages do you enjoy?",
-    subtitle: "Choose up to 3 options.",
-    type: "multiple",
-    maxSelect: 3,
+    id: "q4_bottle_silhouette",
+    section: "SECTION 2 | PACKAGING & AESTHETICS",
+    category: "BOTTLE STUDY",
+    title: "Which bottle design draws your eye first on a shelf?",
+    subtitle: "Select based on visual silhouette.",
+    type: "image_grid",
+    maxSelect: 1,
     options: [
-      { id: "whisky", label: "Whisky" },
-      { id: "rum", label: "Rum" },
-      { id: "gin", label: "Gin" },
-      { id: "vodka", label: "Vodka" },
-      { id: "brandy", label: "Brandy" },
-      { id: "wine", label: "Wine" },
-      { id: "beer", label: "Beer" },
-      { id: "cocktails", label: "Cocktails" },
-      { id: "rtd", label: "Ready-to-Drink beverages" },
-      { id: "other", label: "Other" }
+      { id: "apothecary", label: "Apothecary & Heritage", image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=500" },
+      { id: "sleek_geometry", label: "Sleek & Minimalist", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=500" },
+      { id: "textured_craft", label: "Textured & Embossed Craft", image: "https://images.unsplash.com/photo-1616768393663-e380e22ecbfa?auto=format&fit=crop&q=80&w=500" },
+      { id: "modern_matte", label: "Modern Opaque / Matte", image: "https://images.unsplash.com/photo-1595932598380-459f0322c2bb?auto=format&fit=crop&q=80&w=500" }
     ]
   },
   {
-    id: "q6_favourite_single",
-    section: "SECTION 2 | YOUR BEVERAGE PREFERENCES",
-    category: "BEVERAGE PREFERENCES",
-    title: "If you could choose only ONE beverage, which would it be?",
-    subtitle: "Select your primary benchmark choice.",
-    type: "single",
+    id: "q5_glass_colour",
+    section: "SECTION 2 | PACKAGING & AESTHETICS",
+    category: "BOTTLE STUDY",
+    title: "Which glass finish feels most premium for a high-end spirit?",
+    subtitle: "Select your preferred aesthetic finish.",
+    type: "image_grid",
+    maxSelect: 1,
     options: [
-      { id: "whisky", label: "Whisky" },
-      { id: "rum", label: "Rum" },
-      { id: "gin", label: "Gin" },
-      { id: "vodka", label: "Vodka" },
-      { id: "brandy", label: "Brandy" },
-      { id: "wine", label: "Wine" },
-      { id: "beer", label: "Beer" },
-      { id: "cocktails", label: "Cocktails" },
-      { id: "rtd", label: "Ready-to-Drink beverages" },
-      { id: "other", label: "Other" }
-    ]
-  },
-  {
-    id: "q7_discovery_channels",
-    section: "SECTION 2 | YOUR BEVERAGE PREFERENCES",
-    category: "DISCOVERY",
-    title: "Where do you usually discover new beverages?",
-    subtitle: "Select your main source of inspiration.",
-    type: "single",
-    options: [
-      { id: "friends_family", label: "Friends & Family" },
-      { id: "restaurants", label: "Restaurants" },
-      { id: "bars", label: "Bars" },
-      { id: "retail_stores", label: "Retail Stores" },
-      { id: "social_media", label: "Instagram / Social Media" },
-      { id: "travel", label: "Travel" },
-      { id: "events_festivals", label: "Events & Festivals" }
-    ]
-  },
-  {
-    id: "q8_purchase_driver",
-    section: "SECTION 2 | YOUR BEVERAGE PREFERENCES",
-    category: "PURCHASE DRIVERS",
-    title: "What influences your purchase the most?",
-    subtitle: "Select your top deciding factor.",
-    type: "single",
-    options: [
-      { id: "taste", label: "Taste" },
-      { id: "brand", label: "Brand" },
-      { id: "price", label: "Price" },
-      { id: "packaging", label: "Packaging" },
-      { id: "recommendation", label: "Recommendation" },
-      { id: "story", label: "Story behind the product" }
+      { id: "forest_green", label: "Deep Forest Green Glass", image: "https://images.unsplash.com/photo-1614316710469-6d8011c342cb?auto=format&fit=crop&q=80&w=500" },
+      { id: "warm_amber", label: "Warm Amber Glass", image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=500" },
+      { id: "crystal_clear", label: "Ultra-Clear Crystal Glass", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=500" },
+      { id: "frosted_dark", label: "Frosted / Opaque Dark Glass", image: "https://images.unsplash.com/photo-1595932598380-459f0322c2bb?auto=format&fit=crop&q=80&w=500" }
     ]
   },
 
-  // SECTION 3 | FLAVOUR DISCOVERY
+  // SECTION 3 | EXPLORATION & VALUE
   {
-    id: "q9_appealing_flavours",
-    section: "SECTION 3 | FLAVOUR DISCOVERY",
-    category: "PALATE PREFERENCES",
-    title: "Which flavours naturally appeal to you?",
-    subtitle: "Choose up to 3 options.",
-    type: "multiple",
-    maxSelect: 3,
-    options: [
-      { id: "tropical_fruits", label: "Tropical Fruits" },
-      { id: "citrus", label: "Citrus" },
-      { id: "coconut", label: "Coconut" },
-      { id: "honey", label: "Honey" },
-      { id: "vanilla", label: "Vanilla" },
-      { id: "coffee", label: "Coffee" },
-      { id: "chocolate", label: "Chocolate" },
-      { id: "oak", label: "Oak" },
-      { id: "smoky", label: "Smoky" },
-      { id: "floral", label: "Floral" },
-      { id: "herbal", label: "Herbal" },
-      { id: "spiced", label: "Spiced" }
-    ]
-  },
-  {
-    id: "q10_flavour_style",
-    section: "SECTION 3 | FLAVOUR DISCOVERY",
-    category: "PALATE PREFERENCES",
-    title: "Which style do you usually prefer?",
-    subtitle: "Select your preferred profile structure.",
-    type: "single",
-    options: [
-      { id: "smooth_easy", label: "Smooth & Easy" },
-      { id: "rich_bold", label: "Rich & Bold" },
-      { id: "light_fresh", label: "Light & Fresh" },
-      { id: "complex_layered", label: "Complex & Layered" }
-    ]
-  },
-  {
-    id: "q11_adventurous_scale",
-    section: "SECTION 3 | FLAVOUR DISCOVERY",
+    id: "q6_adventurous_scale",
+    section: "SECTION 3 | EXPLORATION & VALUE",
     category: "EXPLORATION",
-    title: "How adventurous are you when trying something new?",
-    subtitle: "On a scale of 1 (Never) to 5 (Always).",
+    title: "How eager are you to try entirely new craft spirit categories?",
+    subtitle: "Such as elevated coconut spirits or botanical tropical rums.",
     type: "scale",
     min: 1,
     max: 5,
-    minLabel: "1 - Never",
-    maxLabel: "5 - Always"
+    minLabel: "1 - Stick to global classics",
+    maxLabel: "5 - Always seeking rare craft releases"
   },
-
-  // SECTION 4 | DISCOVERY
   {
-    id: "q12_heard_spirits",
-    section: "SECTION 4 | DISCOVERY",
-    category: "CATEGORY AWARENESS",
-    title: "Which of these have you heard of?",
-    subtitle: "Select all that apply.",
-    type: "multiple",
+    id: "q7_innovation_reaction",
+    section: "SECTION 3 | EXPLORATION & VALUE",
+    category: "CATEGORY PERCEPTION",
+    title: "If you saw a new premium Coconut Spirit or Botanical Rum, how would you react?",
+    subtitle: "Select the option that matches your mindset.",
+    type: "standard_single",
     options: [
-      { id: "arrack", label: "Arrack" },
-      { id: "mezcal", label: "Mezcal" },
-      { id: "soju", label: "Soju" },
-      { id: "pisco", label: "Pisco" },
-      { id: "baijiu", label: "Baijiu" },
-      { id: "coconut_spirit", label: "Coconut Spirit" },
-      { id: "none", label: "None of these" }
+      { id: "instant_buy", label: "Instant buy — I love trying unique regional craft spirits." },
+      { id: "curious_bar", label: "Curious — I would order it at a bar first before buying a bottle." },
+      { id: "skeptical_reviews", label: "Skeptical — I would need to see reviews or recommendations first." },
+      { id: "not_interested", label: "Not interested — I stick to established categories." }
     ]
   },
   {
-    id: "q13_coconut_spirit_association",
-    section: "SECTION 4 | DISCOVERY",
-    category: "PERCEPTION",
-    title: "When you hear the words 'Coconut Spirit', what comes to mind?",
-    subtitle: "Short answer (flavours, memories, regions, or expectations).",
-    type: "text_short"
+    id: "q8_price_threshold",
+    section: "SECTION 3 | EXPLORATION & VALUE",
+    category: "PRICE SENSITIVITY",
+    title: "What price threshold do you consider standard for a premium 750ml craft bottle?",
+    subtitle: "Select your usual willingness-to-pay range.",
+    type: "standard_single",
+    options: [
+      { id: "p_1500_2500", label: "₹1,500 – ₹2,500 (Casual Premium)" },
+      { id: "p_2500_3800", label: "₹2,500 – ₹3,800 (Boutique Craft)" },
+      { id: "p_3800_5500", label: "₹3,800 – ₹5,500 (Luxury Release / Gifting)" },
+      { id: "p_5500_plus", label: "₹5,500+ (Rare Collector)" }
+    ]
   },
+
+  // SECTION 4 | LAUNCH STRATEGY
   {
-    id: "q14_curious_to_try",
-    section: "SECTION 4 | DISCOVERY",
-    category: "CATEGORY INNOVATION",
-    title: "Which TWO would you be curious to try?",
-    subtitle: "Select exactly 2 options.",
-    type: "multiple",
+    id: "q9_launch_channel",
+    section: "SECTION 4 | BRAND LAUNCH STRATEGY",
+    category: "DISCOVERY CHANNELS",
+    title: "What is the best way for a new premium brand to introduce itself to you?",
+    subtitle: "Select up to 2 channels.",
+    type: "image_grid",
     maxSelect: 2,
     options: [
-      { id: "small_batch_rum", label: "Small Batch Rum" },
-      { id: "botanical_gin", label: "Botanical Gin" },
-      { id: "coffee_liqueur", label: "Coffee Liqueur" },
-      { id: "coconut_spirit", label: "Coconut Spirit" },
-      { id: "tropical_rum", label: "Tropical Rum" },
-      { id: "cinnamon_spirit", label: "Cinnamon Spirit" },
-      { id: "rtd_cocktails", label: "Ready-to-Drink Cocktails" },
-      { id: "premium_vodka", label: "Premium Vodka" }
-    ]
-  },
-
-  // SECTION 5 | PACKAGING
-  {
-    id: "q15_bottle_attention",
-    section: "SECTION 5 | PACKAGING",
-    category: "BOTTLE STUDY",
-    title: "Which bottle catches your attention first?",
-    subtitle: "Select based on immediate visual impact.",
-    type: "image_select",
-    options: [
-      { id: "bottle_a", label: "Apothecary Amber", image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=400" },
-      { id: "bottle_b", label: "Minimalist Geometry", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=400" },
-      { id: "bottle_c", label: "Craft Embossed Glass", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=400" },
-      { id: "bottle_d", label: "Artisanal Label & Seal", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=400" }
+      { id: "tasting_popups", label: "Tasting Pop-ups at High-End Restaurants / Bars", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=500" },
+      { id: "craft_festivals", label: "Exclusive Launch at Craft Spirits Festivals", image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=500" },
+      { id: "mixologist_word", label: "Mixologist & Bartender Recommendations", image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=500" },
+      { id: "editorial_social", label: "Curated Editorial Features & Lifestyle Media", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=500" }
     ]
   },
   {
-    id: "q16_bottle_premium",
-    section: "SECTION 5 | PACKAGING",
-    category: "BOTTLE STUDY",
-    title: "Which bottle looks the most premium?",
-    subtitle: "Select the option that conveys highest craft quality.",
-    type: "image_select",
+    id: "q10_purchase_trigger",
+    section: "SECTION 4 | BRAND LAUNCH STRATEGY",
+    category: "CONVERSION DRIVERS",
+    title: "What would convince you to buy a bottle from a completely new brand?",
+    subtitle: "Select your top driver.",
+    type: "standard_single",
     options: [
-      { id: "bottle_a", label: "Apothecary Amber", image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=400" },
-      { id: "bottle_b", label: "Minimalist Geometry", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=400" },
-      { id: "bottle_c", label: "Craft Embossed Glass", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=400" },
-      { id: "bottle_d", label: "Artisanal Label & Seal", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=400" }
-    ]
-  },
-  {
-    id: "q17_bottle_gifting",
-    section: "SECTION 5 | PACKAGING",
-    category: "BOTTLE STUDY",
-    title: "Which bottle would you most likely buy as a gift?",
-    subtitle: "Select the bottle you would present to someone else.",
-    type: "image_select",
-    options: [
-      { id: "bottle_a", label: "Apothecary Amber", image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=400" },
-      { id: "bottle_b", label: "Minimalist Geometry", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=400" },
-      { id: "bottle_c", label: "Craft Embossed Glass", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=400" },
-      { id: "bottle_d", label: "Artisanal Label & Seal", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=400" }
-    ]
-  },
-
-  // SECTION 6 | VALUE
-  {
-    id: "q18_price_range",
-    section: "SECTION 6 | VALUE",
-    category: "PRICE SENSITIVITY",
-    title: "What price range would you usually consider for a premium 750 ml bottle?",
-    subtitle: "Select your standard price threshold.",
-    type: "single",
-    options: [
-      { id: "under_1000", label: "Under ₹1,000" },
-      { id: "1000_2000", label: "₹1,000–2,000" },
-      { id: "2000_3000", label: "₹2,000–3,000" },
-      { id: "3000_5000", label: "₹3,000–5,000" },
-      { id: "5000_plus", label: "₹5,000+" }
-    ]
-  },
-  {
-    id: "q19_encouragement_factors",
-    section: "SECTION 6 | VALUE",
-    category: "BRAND ADOPTION",
-    title: "What would encourage you to try a completely new beverage brand?",
-    subtitle: "Choose up to 3 options.",
-    type: "multiple",
-    maxSelect: 3,
-    options: [
-      { id: "free_tasting", label: "Free tasting" },
-      { id: "friend_recommendation", label: "Friend's recommendation" },
-      { id: "attractive_packaging", label: "Attractive packaging" },
-      { id: "interesting_flavour", label: "Interesting flavour" },
-      { id: "positive_reviews", label: "Positive reviews" },
-      { id: "good_value", label: "Good value for money" },
-      { id: "authentic_story", label: "Authentic story" }
+      { id: "authentic_story", label: "An authentic story & regional ingredient heritage" },
+      { id: "flavour_profile", label: "Distinctive flavour profile & stellar tasting reviews" },
+      { id: "packaging_aesthetic", label: "Exceptional bottle packaging & shelf aesthetic" },
+      { id: "trusted_recommendation", label: "Direct recommendation from a mixologist or friend" }
     ]
   },
 
   // FINAL QUESTION
   {
-    id: "q20_final_completion",
-    section: "FINAL QUESTION",
-    category: "OPEN INSIGHT",
+    id: "q11_ultimate_standard",
+    section: "FINAL INSIGHT",
+    category: "OPEN OPINION",
     title: "Complete this sentence:",
     subtitle: '"A great premium beverage should always..."',
     type: "text_long"
