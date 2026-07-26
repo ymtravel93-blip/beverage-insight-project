@@ -7,6 +7,7 @@ import ProgressBar from '../components/ProgressBar';
 export default function Questionnaire({ onComplete }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({});
+  const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const currentQ = QUESTIONS[currentIndex];
@@ -58,7 +59,8 @@ export default function Questionnaire({ onComplete }) {
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
-    await onComplete(answers);
+    // Include user email alongside survey responses
+    await onComplete({ ...answers, respondent_email: email });
     setIsSubmitting(false);
   };
 
@@ -86,7 +88,6 @@ export default function Questionnaire({ onComplete }) {
                 {currentQ.section}
               </span>
 
-              {/* HIGH CONTRAST HEADING & SUBTITLE */}
               <h2 className="font-serif text-2xl sm:text-4xl text-[#121212] font-normal leading-snug mb-2">
                 {currentQ.title}
               </h2>
@@ -94,7 +95,7 @@ export default function Questionnaire({ onComplete }) {
                 {currentQ.subtitle}
               </p>
 
-              {/* DUAL SELECTOR (Location + Age) */}
+              {/* DUAL SELECTOR */}
               {currentQ.type === 'dual_select' && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                   <div>
@@ -122,7 +123,7 @@ export default function Questionnaire({ onComplete }) {
                 </div>
               )}
 
-              {/* TEXT & FONT SELECTION CARDS */}
+              {/* SELECTION CARDS */}
               {(currentQ.type === 'standard_single' || currentQ.type === 'standard_multi' || currentQ.type === 'font_preview_single') && (
                 <div className="grid grid-cols-1 gap-3">
                   {currentQ.options.map(option => (
@@ -161,16 +162,35 @@ export default function Questionnaire({ onComplete }) {
                 </div>
               )}
 
-              {/* OPEN TEXT AREA */}
+              {/* OPEN TEXT AREA + EMAIL OPT-IN */}
               {currentQ.type === 'text_long' && (
-                <div className="mb-6">
-                  <textarea
-                    rows={5}
-                    placeholder="Type your response here..."
-                    value={typeof currentAnswers === 'string' ? currentAnswers : ''}
-                    onChange={(e) => handleTextChange(e.target.value)}
-                    className="w-full p-5 bg-[#FFFFFF] border border-[#D9D5CC] text-[#121212] text-sm rounded-sm focus:outline-none focus:border-[#B38B59] resize-none"
-                  />
+                <div className="space-y-6">
+                  <div>
+                    <textarea
+                      rows={4}
+                      placeholder="Type your response here..."
+                      value={typeof currentAnswers === 'string' ? currentAnswers : ''}
+                      onChange={(e) => handleTextChange(e.target.value)}
+                      className="w-full p-5 bg-[#FFFFFF] border border-[#D9D5CC] text-[#121212] text-sm rounded-sm focus:outline-none focus:border-[#B38B59] resize-none"
+                    />
+                  </div>
+
+                  {/* OPTIONAL EMAIL CAPTURE BOX */}
+                  <div className="p-5 bg-[#FFFFFF] border border-[#D9D5CC] rounded-sm text-left">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-[#B38B59] mb-1">
+                      Join Our Private Tasting List (Optional)
+                    </label>
+                    <p className="text-xs text-[#55524D] mb-3 font-light">
+                      Leave your email if you'd like an exclusive invitation to private launches, pop-up events, and craft spirit tastings.
+                    </p>
+                    <input
+                      type="email"
+                      placeholder="name@domain.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full p-3.5 bg-[#F5F3EF] border border-[#D9D5CC] text-[#121212] text-sm rounded-sm focus:outline-none focus:border-[#B38B59]"
+                    />
+                  </div>
                 </div>
               )}
             </motion.div>
