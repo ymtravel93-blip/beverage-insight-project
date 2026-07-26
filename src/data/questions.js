@@ -86,14 +86,38 @@ export const QUESTIONS = [
     section: "SECTION 2 | PACKAGING & AESTHETICS",
     category: "BRAND AESTHETICS",
     title: "Which label typography & branding style resonates with you?",
-    subtitle: "Select the style you prefer.",
+    subtitle: "Select the typography style you prefer.",
     type: "image_grid",
     maxSelect: 1,
     options: [
-      { id: "classic_editorial", label: "Classic Editorial & Serif Typography", image: "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=600" },
-      { id: "bold_minimal", label: "Bold Sans-Serif Minimalist", image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" },
-      { id: "handcrafted_illustration", label: "Botanical & Hand-Drawn Illustration", image: "https://images.pexels.com/photos/1304542/pexels-photo-1304542.jpeg?auto=compress&cs=tinysrgb&w=600" },
-      { id: "vintage_stamped", label: "Vintage Foil-Stamped Heritage Label", image: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=600" }
+      { 
+        id: "classic_editorial", 
+        label: "Classic Editorial & Serif", 
+        fontStyle: "font-serif italic tracking-wide text-lg",
+        sampleText: "The Heritage Distillery",
+        image: "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=600" 
+      },
+      { 
+        id: "bold_minimal", 
+        label: "Modern Minimalist Sans-Serif", 
+        fontStyle: "font-sans uppercase font-light tracking-[0.25em] text-xs",
+        sampleText: "ELEMENTS / 01",
+        image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" 
+      },
+      { 
+        id: "handcrafted_script", 
+        label: "Handcrafted Cursive & Botanical", 
+        fontStyle: "font-serif italic font-normal text-xl tracking-wider",
+        sampleText: "Artisanal Botanical Sap",
+        image: "https://images.pexels.com/photos/1304542/pexels-photo-1304542.jpeg?auto=compress&cs=tinysrgb&w=600" 
+      },
+      { 
+        id: "vintage_stamped", 
+        label: "Vintage Heritage Display", 
+        fontStyle: "font-serif font-black uppercase tracking-widest text-sm text-[#B38B59]",
+        sampleText: "RESERVE BATCH NO. 4",
+        image: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=600" 
+      }
     ]
   },
 
