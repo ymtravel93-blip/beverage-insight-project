@@ -20,16 +20,46 @@ export const QUESTIONS = [
     section: "SECTION 1 | PROFILE & PALATE",
     category: "PREFERENCES",
     title: "Which beverage categories do you gravitate toward most?",
-    subtitle: "Select up to 3 options.",
+    subtitle: "Select up to 3 options based on bottle preference.",
     type: "image_grid",
     maxSelect: 3,
     options: [
-      { id: "aged_spirits", label: "Aged Spirits (Whisky & Bourbon)", image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=600" },
-      { id: "craft_botanicals", label: "Craft Botanicals & Gin", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=600" },
-      { id: "spiced_rums", label: "Island & Spiced Rums", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=600" },
-      { id: "wines_sparkling", label: "Fine Wines & Champagne", image: "https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?auto=format&fit=crop&q=80&w=600" },
-      { id: "craft_beer", label: "Craft Beer & Ales", image: "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&q=80&w=600" },
-      { id: "rtd_cocktails", label: "Ready-to-Drink Cocktails", image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=600" }
+      { 
+        id: "aged_spirits", 
+        label: "Aged Spirits (Whisky, Bourbon & Aged Rum)", 
+        // Heavy amber glass spirit bottle
+        image: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=600" 
+      },
+      { 
+        id: "craft_botanicals", 
+        label: "Craft Botanicals & Gin", 
+        // Sleek clear botanical gin bottle
+        image: "https://images.unsplash.com/photo-1614316710469-6d8011c342cb?auto=format&fit=crop&q=80&w=600" 
+      },
+      { 
+        id: "spiced_rums", 
+        label: "Island & Spiced Rums", 
+        // Craft dark/spiced rum bottle
+        image: "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&q=80&w=600" 
+      },
+      { 
+        id: "wines_sparkling", 
+        label: "Fine Wines & Champagne", 
+        // Elegant champagne / wine bottle
+        image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=600" 
+      },
+      { 
+        id: "craft_beer", 
+        label: "Craft Beer & Ales", 
+        // Amber glass craft beer bottle
+        image: "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&q=80&w=600" 
+      },
+      { 
+        id: "rtd_cocktails", 
+        label: "Ready-to-Drink Cocktails & Spritzes", 
+        // Modern minimalist RTD bottle / sleek vessel
+        image: "https://images.unsplash.com/photo-1595932598380-459f0322c2bb?auto=format&fit=crop&q=80&w=600" 
+      }
     ]
   },
   {
