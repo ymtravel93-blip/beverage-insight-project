@@ -4,7 +4,7 @@ import Questionnaire from './views/Questionnaire';
 import ThankYouPage from './views/ThankYouPage';
 
 // Active Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwX2BRbRnY8z4SENVRtK7drpZJNYO9wh0Cg_4gYxQaMMRagq5UyHasTBINShfahV9VUWA/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwX2BRbRnY8z4SENVRtK7drpZJNYO9wh0Cg_4gYxQaMMRagq5UyHasTBlNShfahV9VUWA/exec";
 
 export default function App() {
   const [currentStep, setCurrentStep] = useState('landing'); // 'landing' | 'questionnaire' | 'thankyou'
@@ -14,7 +14,7 @@ export default function App() {
   };
 
   const handleComplete = async (surveyAnswers) => {
-    // Add ISO timestamp before sending
+    // Attach ISO timestamp to payload
     const payload = {
       timestamp: new Date().toISOString(),
       ...surveyAnswers,
