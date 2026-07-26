@@ -32,24 +32,25 @@ export const QUESTIONS = [
       { id: "rtd_cocktails", label: "Ready-to-Drink Cocktails", image: "https://images.pexels.com/photos/1304540/pexels-photo-1304540.jpeg?auto=compress&cs=tinysrgb&w=600" }
     ]
   },
-  {
+ {
     id: "q3_flavour_notes",
     section: "SECTION 1 | PROFILE & PALATE",
-    category: "PALATE",
+    category: "PALATE PREFERENCES",
     title: "When choosing a premium drink, which flavour profiles appeal to you?",
     subtitle: "Select up to 3 options.",
     type: "image_grid",
     maxSelect: 3,
     options: [
-      { id: "tropical_citrus", label: "Tropical & Citrus (Coconut Sap, Lime)", image: "https://images.pexels.com/photos/1028637/pexels-photo-1028637.jpeg?auto=compress&cs=tinysrgb&w=600" },
-      { id: "warm_spiced", label: "Warm & Spiced (Ceylon Cinnamon, Clove)", image: "https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=600" },
-      { id: "earthy_botanical", label: "Earthy Botanicals (Juniper, Wild Herbs)", image: "https://images.pexels.com/photos/1304542/pexels-photo-1304542.jpeg?auto=compress&cs=tinysrgb&w=600" },
-      { id: "honey_vanilla", label: "Honeyed & Toasted (Natural Honey, Vanilla)", image: "https://images.pexels.com/photos/33260/honey-sweet-syrup-organic.jpg?auto=compress&cs=tinysrgb&w=600" },
-      { id: "smoky_wood", label: "Smoky & Woody (Toasted Oak, Charred Wood)", image: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=600" },
-      { id: "espresso_cocoa", label: "Indulgent Dark (Espresso, Dark Cocoa)", image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=600" }
+      { id: "fruity", label: "Fruity (Tropical Fruits, Berries & Orchard Notes)", image: "https://images.pexels.com/photos/1028637/pexels-photo-1028637.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "floral", label: "Floral (Elderflower, Citrus Blossom & Botanicals)", image: "https://images.pexels.com/photos/1083822/pexels-photo-1083822.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "smoky", label: "Smoky (Toasted Oak, Peat & Charred Wood)", image: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "earthy", label: "Earthy (Herbal, Sap, Moss & Forest Floor)", image: "https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "fresh", label: "Fresh (Crisp Citrus Zest, Mint & Fresh Coconut)", image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "dark", label: "Dark (Malty, Roasted Grain & Deep Molasses)", image: "https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "warm_spices", label: "Warm & Spices (Ceylon Cinnamon, Clove & Star Anise)", image: "https://images.pexels.com/photos/1304542/pexels-photo-1304542.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "indulgent_dark", label: "Indulgent Dark (Espresso, Dark Cocoa & Rich Honey)", image: "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=600" }
     ]
   },
-
   // SECTION 2 | PACKAGING & AESTHETICS
   {
     id: "q4_bottle_silhouette",
@@ -167,19 +168,21 @@ export const QUESTIONS = [
   },
 
   // SECTION 4 | LAUNCH STRATEGY
-  {
+ {
     id: "q10_launch_channel",
     section: "SECTION 4 | BRAND LAUNCH STRATEGY",
-    category: "DISCOVERY CHANNELS",
+    category: "LAUNCH DISCOVERY",
     title: "What is the best way for a new premium brand to introduce itself to you?",
     subtitle: "Select up to 2 preferred channels.",
     type: "image_grid",
     maxSelect: 2,
     options: [
-      { id: "tasting_popups", label: "Exclusive Tasting Pop-ups at High-End Bars", image: "https://images.pexels.com/photos/616836/pexels-photo-616836.jpeg?auto=compress&cs=tinysrgb&w=600" },
-      { id: "craft_festivals", label: "Boutique Craft Spirits Festivals", image: "https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&w=600" },
-      { id: "mixologist_recommend", label: "Mixologist & Bartender Endorsements", image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" },
-      { id: "editorial_media", label: "Curated Lifestyle & Editorial Features", image: "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=600" }
+      { id: "tasting_popups", label: "Exclusive Tasting Pop-ups at High-End Lounges", image: "https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "online_curators", label: "Reviews & Features from Online Alcohol Curators & Specialists", image: "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "word_of_mouth", label: "Direct Word-of-Mouth Recommendations & Tastings", image: "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "craft_festivals", label: "Boutique Craft Spirits Festivals & Exhibitions", image: "https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "mixologist_endorsements", label: "Mixologist & Bartender Signature Cocktails", image: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { id: "editorial_features", label: "Curated Lifestyle & Spirits Editorial Features", image: "https://images.pexels.com/photos/616836/pexels-photo-616836.jpeg?auto=compress&cs=tinysrgb&w=600" }
     ]
   },
   {
