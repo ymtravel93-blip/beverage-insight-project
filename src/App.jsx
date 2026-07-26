@@ -4,7 +4,7 @@ import LandingPage from './views/LandingPage.jsx';
 import Questionnaire from './views/Questionnaire.jsx';
 import ThankYouPage from './views/ThankYouPage.jsx';
 
-const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"; 
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwX2BRbRnY8z4SENVRtK7drpZJNYO9wh0Cg_4gYxQaMMRagq5UyHasTBlNShfahV9VUWA/exec"; 
 
 export default function App() {
   const [currentView, setCurrentView] = useState('landing'); // 'landing' | 'questionnaire' | 'thankyou'
